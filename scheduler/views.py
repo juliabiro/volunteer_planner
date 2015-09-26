@@ -33,10 +33,11 @@ class HomeView(TemplateView):
         context = super(HomeView, self).get_context_data(**kwargs)
         context['locations'] = Location.objects.all()
         context['notifications'] = Notification.objects.all()
+        context['language'] = "de"
         return context
 
 class HomeViewHU(TemplateView):
-    template_name = "homeHU.html"
+    template_name = "home_HU.html"
 
     def get(self, request, *args, **kwargs):
         if self.request.user.is_authenticated():
@@ -46,9 +47,11 @@ class HomeViewHU(TemplateView):
         return self.render_to_response(context)
 
     def get_context_data(self, **kwargs):
-        context = super(HomeView, self).get_context_data(**kwargs)
+        context = super(HomeViewHU, self).get_context_data(**kwargs)
         context['locations'] = Location.objects.all()
         context['notifications'] = Notification.objects.all()
+        #print(dir(self.request.GET.viewitems))
+        context['language'] = "hu"
         return context
 
 
