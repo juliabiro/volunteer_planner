@@ -36,7 +36,7 @@ class Region(models.Model):
         ordering = ('country', 'name',)
 
     def __unicode__(self):
-        return u'{}'.format(self.name)
+        return u'{} ({})'.format(self.name, self.country.name)
 
 
 class Area(models.Model):
@@ -55,23 +55,24 @@ class Area(models.Model):
         ordering = ('region', 'name',)
 
     def __unicode__(self):
-        return u'{}'.format(self.name)
+        return u'{} ({})'.format(self.name, self.region.name)
 
 
-class Municipality(models.Model):
+class Place(models.Model):
     '''
-    A municipality (german: Gemeinde) can be a city like Jena in Thüringen - Jena
+    A place (german: Ort) can be a city like Jena in Thüringen - Jena
     or a 'district' like  Wilmersdorf in Berlin - Berlin.
     '''
-    area = models.ForeignKey(Area, related_name='municipalities',
-                             verbose_name=_('municipality'))
+    area = models.ForeignKey(Area,
+                             related_name='places',
+                             verbose_name=_('area'))
     name = models.CharField(max_length=50, unique=True, verbose_name=_('name'))
     slug = models.SlugField(verbose_name=_(u'slug'))
 
     def __unicode__(self):
-        return u'{}'.format(self.name)
+        return u'{} ({})'.format(self.name, self.area.name)
 
     class Meta:
-        verbose_name = _('municipality')
-        verbose_name_plural = _('municipalities')
+        verbose_name = _('place')
+        verbose_name_plural = _('places')
         ordering = ('area', 'name',)

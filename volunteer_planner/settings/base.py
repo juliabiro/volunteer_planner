@@ -54,7 +54,8 @@ LOCAL_APPS = (
     'ckeditor',
     'shiftmailer',
     'stats',
-    'places'
+    'places',
+    'non_logged_in_area',
 )
 
 INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS
@@ -121,7 +122,7 @@ LOGGING = {
         },
     }
 }
-LOGIN_REDIRECT_URL = '/helpdesk/'
+LOGIN_REDIRECT_URL = '/'
 LOGIN_URL = '/auth/login/'
 
 TIME_ZONE = 'Europe/Berlin'

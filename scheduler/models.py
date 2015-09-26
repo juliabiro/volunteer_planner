@@ -80,34 +80,36 @@ class Topics(models.Model):
 
 
 class Location(models.Model):
-    name = models.CharField(max_length=255, blank=True)
-    street = models.CharField(max_length=255, blank=True)
-    city = models.CharField(max_length=255, blank=True)
-    postal_code = models.CharField(max_length=5, blank=True)
-    latitude = models.CharField(max_length=30, blank=True)
-    longitude = models.CharField(max_length=30, blank=True)
-    additional_info = models.TextField(max_length=300000, blank=True)
+    name = models.CharField(max_length=255, blank=True,
+                            verbose_name=_('name'))
+    street = models.CharField(max_length=255, blank=True,
+                              verbose_name=_('address'))
+    city = models.CharField(max_length=255, blank=True,
+                            verbose_name=_('city'))
+    postal_code = models.CharField(max_length=5, blank=True,
+                                   verbose_name=_('postal code'))
+    latitude = models.CharField(max_length=30, blank=True,
+                                verbose_name=_('latitude'))
+    longitude = models.CharField(max_length=30, blank=True,
+                                 verbose_name=_('longitude'))
+    additional_info = models.TextField(max_length=300000, blank=True,
+                                       verbose_name=_('description'))
 
-    municipality = models.ForeignKey("places.Municipality",
-                                     null=False,
-                                     related_name='locations',
-                                     verbose_name=_('municipality'))
+    place = models.ForeignKey("places.Place",
+                              null=False,
+                              related_name='locations',
+                              verbose_name=_('place'))
 
     class Meta:
         verbose_name = _(u'location')
         verbose_name_plural = _(u'locations')
-        ordering = (
-            'municipality',
-            'name',
-        )
+        ordering = ('place', 'name', )
         permissions = (
             ("can_view", u"User can view location"),
         )
 
     def __unicode__(self):
         return u'{}'.format(self.name)
-
-
 
 
 # class Organization(models.Model):
