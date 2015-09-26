@@ -25,6 +25,23 @@ class HomeView(TemplateView):
     def get(self, request, *args, **kwargs):
         if self.request.user.is_authenticated():
             return HttpResponseRedirect(reverse('helpdesk'))
+
+        context = self.get_context_data(**kwargs)
+        return self.render_to_response(context)
+
+    def get_context_data(self, **kwargs):
+        context = super(HomeView, self).get_context_data(**kwargs)
+        context['locations'] = Location.objects.all()
+        context['notifications'] = Notification.objects.all()
+        return context
+
+class HomeViewHU(TemplateView):
+    template_name = "homeHU.html"
+
+    def get(self, request, *args, **kwargs):
+        if self.request.user.is_authenticated():
+            return HttpResponseRedirect(reverse('helpdesk'))
+
         context = self.get_context_data(**kwargs)
         return self.render_to_response(context)
 
