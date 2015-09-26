@@ -33,7 +33,6 @@ class HomeView(TemplateView):
         context = super(HomeView, self).get_context_data(**kwargs)
         context['locations'] = Location.objects.all()
         context['notifications'] = Notification.objects.all()
-        context['language'] = "de"
         return context
 
 class HomeViewHU(TemplateView):
