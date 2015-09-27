@@ -66,10 +66,9 @@
 
             <div class="col-md-3" style="padding-left: 60px;">
 
-                <h2>Platform zur Organisation von Freiwilligen-Diensten</h2>
+                <h2>{% trans Platform zur Organisation von Freiwilligen-Diensten%}</h2>
 
-                <p>Auf dieser Plattform werden die Freiwilligen-Dienste in
-                    folgenden Einrichtungen koordiniert:</p>
+                <p>{% trans Auf dieser Plattform werden die Freiwilligen-Dienste in folgenden Einrichtungen koordiniert: %}</p>
                 <ul>
                     {% for location in locations %}
                         <li>{{ location }}, {{ location.city }}</li>
@@ -96,7 +95,7 @@
             </div>
             <div class="disclaimer">
                 <p>
-                    Für Kritik, Anregungen oder Support: <a
+                    {% trans Für Kritik, Anregungen oder Support: %} <a
                         href="mailto:support@volunteer-planner.org">support@volunteer-planner.org</a>
                 </p>
             </div>
