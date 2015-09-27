@@ -46,29 +46,29 @@
 
                 <a href="{% url 'registation' %}">
                     <button type="button" class="btn btn-primary btn-lg active">
-                        {% trans Info and registration %}
+                        {% trans "Info and registration" %}
                     </button>
                 </a>
                 <a href="{% url 'auth_login' %}">
                     <button type="button"
                             class="btn btn-primary transparent btn-lg active">
-                        {% trans Login %}
+                        {% trans "Login" %}
                     </button>
                 </a>
                 <br>
                 <a href="{% url 'faq' %}">
                     <button type="button"
                             class="btn btn-primary transparent btn-lg active">
-                        {% trans Frequently Asked Questions %}
+                        {% trans "Frequently Asked Questions" %}
                     </button>
                 </a>
             </div>
 
             <div class="col-md-3" style="padding-left: 60px;">
 
-                <h2>{% trans Platform zur Organisation von Freiwilligen-Diensten%}</h2>
+                <h2>{% trans "Platform zur Organisation von Freiwilligen-Diensten" %}</h2>
 
-                <p>{% trans Auf dieser Plattform werden die Freiwilligen-Dienste in folgenden Einrichtungen koordiniert: %}</p>
+                <p>{% trans "Auf dieser Plattform werden die Freiwilligen-Dienste in folgenden Einrichtungen koordiniert:" %}</p>
                 <ul>
                     {% for location in locations %}
                         <li>{{ location }}, {{ location.city }}</li>
@@ -95,7 +95,7 @@
             </div>
             <div class="disclaimer">
                 <p>
-                    {% trans Für Kritik, Anregungen oder Support: %} <a
+                    {% trans "Für Kritik, Anregungen oder Support:" %} <a
                         href="mailto:support@volunteer-planner.org">support@volunteer-planner.org</a>
                 </p>
             </div>
