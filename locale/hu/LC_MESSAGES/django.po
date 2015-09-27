@@ -249,6 +249,8 @@ msgstr "Belépés"
 msgid "Frequently Asked Questions"
 msgstr "Gyakran Ismételt Kérdések"
 
+
+
 #: templates/registration/password_change_done.html:3
 msgid "Password changed"
 msgstr "A jelszó megváltozott"
