@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-25 16:59+0200\n"
+"POT-Creation-Date: 2015-09-27 16:14+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -90,11 +90,15 @@ msgid "You must agree to the terms to register"
 msgstr ""
 
 #: registration/forms.py:99
-msgid "This email address is already in use. Please supply a different email address."
+msgid ""
+"This email address is already in use. Please supply a different email "
+"address."
 msgstr ""
 
 #: registration/forms.py:124
-msgid "Registration using free email addresses is prohibited. Please supply a different email address."
+msgid ""
+"Registration using free email addresses is prohibited. Please supply a "
+"different email address."
 msgstr ""
 
 #: registration/models.py:219
@@ -115,11 +119,16 @@ msgstr ""
 
 #: registration/templates/activate.html:14
 #, python-format
-msgid "Thanks %(account)s, activation complete! You may now <a href='%(auth_login_url)s'>login</a> using the username and password you set at registration."
+msgid ""
+"Thanks %(account)s, activation complete! You may now <a "
+"href='%(auth_login_url)s'>login</a> using the username and password you set "
+"at registration."
 msgstr ""
 
 #: registration/templates/activate.html:19
-msgid "Oops &ndash; Either you activated your account already, or the activation key is invalid or has expired."
+msgid ""
+"Oops &ndash; Either you activated your account already, or the activation "
+"key is invalid or has expired."
 msgstr ""
 
 #: registration/templates/login.html:15
@@ -170,16 +179,18 @@ msgstr ""
 msgid "locations"
 msgstr ""
 
-#: scheduler/views.py:76
+#: scheduler/views.py:97
 msgid "The submitted data was invalid."
 msgstr ""
 
-#: scheduler/views.py:89
+#: scheduler/views.py:110
 #, python-brace-format
-msgid "We can't add you to this shift because you've already agreed to other shifts at the same time: {conflicts}"
+msgid ""
+"We can't add you to this shift because you've already agreed to other shifts "
+"at the same time: {conflicts}"
 msgstr ""
 
-#: scheduler/views.py:94
+#: scheduler/views.py:115
 msgid "You were successfully added to this shift."
 msgstr ""
 
@@ -203,9 +214,20 @@ msgstr ""
 msgid "email"
 msgstr ""
 
-#: templates/home.html:88
+#: templates/home.html:88 templates/home_HU.html:87
+#: templates/home_i18l.html:88
 #, python-format
-msgid "Already %(volunteer_count)s volunteers signed up and worked %(volunteer_hours)s hours in total."
+msgid ""
+"Already %(volunteer_count)s volunteers signed up and worked "
+"%(volunteer_hours)s hours in total."
+msgstr ""
+
+#: templates/home_i18l.html:49
+msgid "Info and registration"
+msgstr ""
+
+#: templates/home_i18l.html:55
+msgid "Login"
 msgstr ""
 
 #: templates/registration/password_change_done.html:3
@@ -239,7 +261,9 @@ msgstr ""
 
 #: templates/registration/password_reset_complete.html:7
 #, python-format
-msgid "Your password has been reset! You may now <a href=\"%(login_url)s\">log in</a>."
+msgid ""
+"Your password has been reset! You may now <a href=\"%(login_url)s\">log in</"
+"a>."
 msgstr ""
 
 #: templates/registration/password_reset_confirm.html:3
@@ -266,10 +290,12 @@ msgstr ""
 #, python-format
 msgid ""
 "You are receiving this email because you (or someone pretending to be you)\n"
-"requested that your password be reset on the %(domain)s site.  If you do not\n"
+"requested that your password be reset on the %(domain)s site.  If you do "
+"not\n"
 "wish to reset your password, please ignore this message.\n"
 "\n"
-"To reset your password, please click the following link, or copy and paste it\n"
+"To reset your password, please click the following link, or copy and paste "
+"it\n"
 "into your web browser:"
 msgstr ""
 

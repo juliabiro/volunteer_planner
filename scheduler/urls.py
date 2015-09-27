@@ -5,7 +5,7 @@ from django.conf.urls import url
 from .views import HomeView, HomeViewHU, HelpDesk, PlannerView
 
 urlpatterns = [
-    url(r'^$', HomeView.as_view(template_name="home.html")),
+    url(r'^$', HomeView.as_view(template_name="home_i18l.html")),
     url(r'^hu/$', HomeViewHU.as_view(template_name="home_HU.html")),
     url(r'^helpdesk/$', HelpDesk.as_view(), name="helpdesk"),
     url(

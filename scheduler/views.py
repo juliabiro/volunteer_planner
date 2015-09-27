@@ -9,6 +9,7 @@ from django.db.models import Count
 from django.views.generic import TemplateView, FormView
 
 from django.utils.translation import ugettext_lazy as _
+from django.utils import translation
 
 from scheduler.models import Location, Need
 from notifications.models import Notification
@@ -27,6 +28,7 @@ class HomeView(TemplateView):
             return HttpResponseRedirect(reverse('helpdesk'))
 
         context = self.get_context_data(**kwargs)
+        translation.activate('hu')
         return self.render_to_response(context)
 
     def get_context_data(self, **kwargs):

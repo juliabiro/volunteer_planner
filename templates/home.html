@@ -46,20 +46,20 @@
 
                 <a href="{% url 'registation' %}">
                     <button type="button" class="btn btn-primary btn-lg active">
-                        Helfen und Registrieren
+                        {% trans Info and registration %}
                     </button>
                 </a>
                 <a href="{% url 'auth_login' %}">
                     <button type="button"
                             class="btn btn-primary transparent btn-lg active">
-                        Login
+                        {% trans Login %}
                     </button>
                 </a>
                 <br>
                 <a href="{% url 'faq' %}">
                     <button type="button"
                             class="btn btn-primary transparent btn-lg active">
-                        Häufig gestellte Fragen
+                        {% trans Frequently Asked Questions %}
                     </button>
                 </a>
             </div>
